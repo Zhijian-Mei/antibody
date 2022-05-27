@@ -7,11 +7,10 @@ app = Flask(__name__)
 # create an upload folder
 # app.config['UPLOAD_FOLDER'] = 'uploads/'
 
-app.config['ALLOWED_FILE_EXTENSIONS'] = ['XLSX']
+app.config['ALLOWED_FILE_EXTENSIONS'] = ['TSV']
 
 
 def allowed_file(filename):
-
     return '.' in filename and filename.rsplit('.', 1)[-1].upper() in app.config['ALLOWED_FILE_EXTENSIONS']
 
 
